@@ -49,8 +49,12 @@ function initializeLiff(liffId, endpoint) {
             liffId: liffId
         })
         .then(() => {
-            // start to use LIFF's api
-            initializeApp(endpoint);
+            if (liff.isInClient()) {
+                // start to use LIFF's api
+                initializeApp(endpoint);
+            } else {
+                window.location = endpoint
+            }
         })
         .catch((err) => {
             console.log(err)
