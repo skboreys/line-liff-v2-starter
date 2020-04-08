@@ -1,4 +1,7 @@
 window.onload = function() {
+
+    if ( !liff.isInClient() ) window.location = '/404';
+
     const useNodeJS = true;   // if you are not using a node server, set this value to false
     const defaultLiffId = "";   // change the default LIFF value if you are not using a node server
 
@@ -52,8 +55,6 @@ function initializeLiff(liffId, endpoint) {
             if (liff.isInClient()) {
                 // start to use LIFF's api
                 initializeApp(endpoint);
-            } else {
-                window.location = endpoint
             }
         })
         .catch((err) => {
