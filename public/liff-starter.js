@@ -2,12 +2,12 @@ window.onload = function() {
 
     if ( !liff.isInClient() ) window.location = '/404';
 
-    const useNodeJS = true;   // if you are not using a node server, set this value to false
-    const defaultLiffId = "";   // change the default LIFF value if you are not using a node server
+    const useNodeJS = false;   // if you are not using a node server, set this value to false
+    const defaultLiffId = "1654048483-NG5eBoKW";   // change the default LIFF value if you are not using a node server
 
     // DO NOT CHANGE THIS
     let liffId = "";
-    let endpoint = ""
+    let endpoint = "https://tracechain.gatewayserviceth.com/#/"
 
     // if node is used, fetch the environment variable and pass it to the LIFF method
     // otherwise, pass defaultLiffId
