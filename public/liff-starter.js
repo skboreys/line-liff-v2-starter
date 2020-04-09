@@ -77,7 +77,7 @@ function initializeApp(endpoint) {
         const menu = params.get('menu');
         url += '&menu=' + ((menu != null && menu != '') ? menu: 'covidTracker');
 
-        liff.closeWindow();
+        // liff.closeWindow();
         liff.openWindow({ url: url, external: true });
     }).catch(function(error) {
         window.alert('Error getting profile: ' + error);
