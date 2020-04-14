@@ -11,7 +11,7 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
         window.onload = function () {
-    
+
             var liffId = "1654048483-NG5eBoKW";
             var endpoint = "https://tracechain.gatewayserviceth.com/#/"
 
@@ -58,7 +58,7 @@
                 //Todo : IOS not work
                 // liff.closeWindow();
                 // liff.openWindow({ url: url, external: true });
-                window.location = url;
+                window.open(url, "", "resizable,scrollbars,status");
             }).catch(function (error) {
                 //Todo : IOS not work
                 // window.alert('Error getting profile: ' + error);
