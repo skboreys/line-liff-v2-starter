@@ -78,7 +78,7 @@ function initializeApp(endpoint) {
         url += '&menu=' + ((menu != null && menu != '') ? menu: 'covidTracker');
         //Todo : IOS not work
         // liff.closeWindow();
-        liff.openWindow({ url: url, external: true });
+        liff.openWindow({ url: url, external: false });
     }).catch(function(error) {
         //Todo : IOS not work
         // window.alert('Error getting profile: ' + error);
