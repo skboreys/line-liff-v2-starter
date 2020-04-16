@@ -5,7 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading ...</title>
+    <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+    <script> var vConsole = new VConsole();</script>
 </head>
+
 <body>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
@@ -41,8 +44,8 @@
                     url += '&menu=' + ((menu != null && menu != '') ? menu : 'covidTracker');
 
                     // liff.closeWindow();
-                    liff.openWindow({ url: url });
-                    // window.location = url;
+                    // liff.openWindow({ url: url, external: false });
+                    window.location = url;
                 }).catch(function (error) {
                     // console.log('Error getting profile: ' + error);
                 });
