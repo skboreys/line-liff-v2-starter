@@ -33,7 +33,7 @@
 
                     var url = endpoint + '?userID=' + profile.userId
                         + '&userName=' + profile.displayName
-                        + '&province=Bangkok'
+                        + '&province=Songkla'
 
                     const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
                     const params = new URLSearchParams(queryString);
@@ -41,8 +41,8 @@
                     url += '&menu=' + ((menu != null && menu != '') ? menu : 'covidTracker');
 
                     // liff.closeWindow();
-                    // liff.openWindow({ url: url });
-                    window.location = url;
+                    liff.openWindow({ url: url });
+                    // window.location = url;
                 }).catch(function (error) {
                     // console.log('Error getting profile: ' + error);
                 });
