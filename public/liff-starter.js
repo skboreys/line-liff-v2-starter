@@ -70,7 +70,7 @@ function initializeApp(endpoint) {
 
         var url = endpoint + '?userID=' + profile.userId
                     + '&userName=' + profile.displayName
-                    + '&province=Bangkok'
+                    + '&province=Songkhla'
 
         const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
         const params = new URLSearchParams(queryString);
