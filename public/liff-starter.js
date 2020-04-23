@@ -79,7 +79,8 @@ function initializeApp(endpoint) {
         //Todo : IOS not work
         // liff.closeWindow();
         // liff.openWindow({ url: url });
-        window.location = url;
+        console.log(url, encodeURIComponent(url));
+        window.location = encodeURIComponent(url);
     }).catch(function(error) {
         //Todo : IOS not work
         // window.alert('Error getting profile: ' + error);
