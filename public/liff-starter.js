@@ -69,13 +69,13 @@ function initializeApp(endpoint) {
     liff.getProfile().then(function(profile) {
 
         var url = endpoint + '?userID=' + profile.userId
-                    + '&userName=' + profile.displayName
-                    + '&province=Songkhla'
+                    + '&province=Songkhla';
 
         const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
         const params = new URLSearchParams(queryString);
         const menu = params.get('menu');
         url += '&menu=' + ((menu != null && menu != '') ? menu: 'covidTracker');
+        url += '&userName=' + profile.displayName;
         //Todo : IOS not work
         // liff.closeWindow();
         // liff.openWindow({ url: url });
