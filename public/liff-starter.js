@@ -75,12 +75,12 @@ function initializeApp(endpoint) {
         const params = new URLSearchParams(queryString);
         const menu = params.get('menu');
         url += '&menu=' + ((menu != null && menu != '') ? menu: 'covidTracker');
-        url += '&userName=' + profile.displayName;
+        url += '&userName=' + encodeURIComponent(profile.displayName);
         //Todo : IOS not work
         // liff.closeWindow();
         // liff.openWindow({ url: url });
-        console.log(url, encodeURIComponent(url));
-        window.location = encodeURIComponent(url);
+        console.log(url);
+        window.location = url;
     }).catch(function(error) {
         //Todo : IOS not work
         // window.alert('Error getting profile: ' + error);
